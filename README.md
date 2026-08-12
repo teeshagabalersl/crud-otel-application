@@ -1,4 +1,4 @@
-# Observability Skeleton — Quick Start
+# Observability Skeleton 
 
 ## Setup
 
