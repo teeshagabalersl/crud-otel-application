@@ -2,6 +2,12 @@ package com.example.observability.entity;
 
 import jakarta.persistence.*;
 
+/**
+ * JPA entity representing a simple user.
+ * <p>
+ * Only id, name and email fields are present to keep the model minimal for the
+ * observability assignment. Email is unique and both name and email are required.
+ */
 @Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "email")})
 public class User {

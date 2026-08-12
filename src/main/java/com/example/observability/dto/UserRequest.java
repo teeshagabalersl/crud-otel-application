@@ -3,6 +3,10 @@ package com.example.observability.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
+/**
+ * DTO representing a request to create a User.
+ * Validation annotations ensure incoming payloads meet basic requirements.
+ */
 public class UserRequest {
 
     @NotBlank(message = "name must not be blank")

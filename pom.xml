@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>observability-skeleton</name>
-    <description>Skeleton Spring Boot application for OpenTelemetry assignment</description>
+    <description>Skeleton Spring Boot application for observability assignment</description>
 
     <properties>
         <java.version>17</java.version>

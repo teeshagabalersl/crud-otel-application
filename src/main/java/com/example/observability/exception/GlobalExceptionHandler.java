@@ -15,6 +15,12 @@ import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 import java.util.stream.Collectors;
 
+/**
+ * Global exception handler that maps exceptions to JSON error responses.
+ *
+ * The response contains: timestamp, status, message, and path. This keeps API
+ * error responses consistent and easy to parse for clients or automated tests.
+ */
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
@@ -30,6 +36,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
     }
 
+    /**
+     * Handle @Valid validation failures (request body validation).
+     * The default method signature changed in Spring 6 so it uses HttpStatusCode.
+     */
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                   HttpHeaders headers,

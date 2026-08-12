@@ -1,5 +1,8 @@
 package com.example.observability.dto;
 
+/**
+ * DTO returned by the API representing a persisted user.
+ */
 public class UserResponse {
     private Long id;
     private String name;
